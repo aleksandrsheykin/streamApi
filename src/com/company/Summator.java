@@ -43,8 +43,8 @@ public class Summator extends Thread {
                             .filter((j)->j > 0 && j %2 == 0)
                             .sum()
             );
-            str.forEach(System.out::println);
-            //str.mapToInt((val) -> SumVal.sum(val) );
+            //str.forEach(System.out::println);
+            str.forEach((val) -> SumVal.sum(val) );
 
         } catch (IOException e) {
             System.out.println("IOException in'" + res + "");

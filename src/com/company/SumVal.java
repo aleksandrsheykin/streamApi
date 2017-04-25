@@ -17,8 +17,9 @@ public class SumVal extends ReentrantLock {
         value = new AtomicInteger(0);
     }
 
-    public static void sum(Integer a) {
-        value.addAndGet(a);
+    public static Integer sum(Object a) {
+        value.addAndGet( (Integer) a);
         System.out.println(value.get());
+        return (Integer) a;
     }
 }

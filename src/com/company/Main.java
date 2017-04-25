@@ -18,18 +18,6 @@ public class Main {
                 "C:\\Users\\admin\\IdeaProjects\\streamApi\\2.txt",
                 "C:\\Users\\admin\\IdeaProjects\\streamApi\\3.txt"};
 
-       /* try {
-            Stream<String> streamLine = Files.lines(Paths.get(res[0]));
-            Stream str = streamLine.map(
-                    (line) -> Arrays.stream(line.split("\\s+"))
-                            .mapToInt((a) -> Integer.parseInt(a))
-                            .filter((j)->j > 0 && j %2 == 0).sum()
-            );
-            //str.forEach(System.out::println);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
-
         for (int i = 0; i < res.length; i++) {
             new Summator(res[i], i, sumVal, finisher).start();
         }
